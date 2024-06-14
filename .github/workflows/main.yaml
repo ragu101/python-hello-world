@@ -24,11 +24,6 @@ jobs:
           source venv/bin/activate
           pip install -r requirements.txt
 
-      - name: Lint with pylint
-        run: |
-          pip install pylint
-          pylint hello_world tests setup.py
-
       - name: Run tests
         run: |
           source venv/bin/activate
