@@ -1,8 +1,10 @@
+""" Module Providing methods to interact with http url"""
 import requests
 
 
 def fetch_github_api_status():
-    response = requests.get('https://api.github.com')
+    """Function that feches github api status"""
+    response = requests.get("https://api.github.com", timeout=10)
     if response.status_code == 200:
         return 'Hello, World! GitHub API is reachable.'
     else:
@@ -10,6 +12,7 @@ def fetch_github_api_status():
 
 
 def main():
+    """Main function of the script"""
     print(fetch_github_api_status())
 
 
